@@ -1,0 +1,5 @@
+# DeskitApp 应用配置
+config:
+  SESSDATA: '123'
+  bili_jct: ''
+  DedeUserID: ''
