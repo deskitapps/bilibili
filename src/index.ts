@@ -55,7 +55,6 @@ export async function main() {
 
   if (isWatchFinished && isCoinFinished) {
     console.log('所有每日奖励均已完成');
-    process.exit();
   }
 
   if (!isWatchFinished || !isCoinFinished) {
@@ -100,6 +99,11 @@ export async function main() {
     }
     isCoinFinished = true;
   }
+
+  process.exit(0);
 }
 
-main();
+main().catch(e => {
+  console.error(e);
+  process.exit(1)
+});
